@@ -5,6 +5,8 @@ body {
   }
   
   .menu {
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: whitesmoke;
   }
   
