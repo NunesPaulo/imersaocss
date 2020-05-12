@@ -1,8 +1,7 @@
 body {
-    background-image: url(https://i.pinimg.com/originals/3c/88/8e/3c888e6cbe48ade2b7cb6211fdf36b2f.jpg);
-    background-size: 100vw 100vh;
-    height: 100vh;
     font-family: Arial;
+    background-color: black;
+    margin: 0
   }
   
   .menu {
@@ -12,20 +11,22 @@ body {
   .menu ul {
     display: flex;
     justify-content: space-evenly;
+    padding-inline-start: 0px;
   }
   
   .menu li {
     list-style: none;
+    padding: 10px;
   }
   
   a {
+    padding: 10px;
     color: teal;
     text-decoration: none;
   }
   
   a:hover {
     background-color: orange;
-    font-size: 1.2em;
   }
   
   .site_subtitle,
