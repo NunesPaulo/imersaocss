@@ -1,27 +1,32 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 body {
-  background-size: 100vw 100vh;
   background-color: black;
+  background-size: 100vw 100vh;
+  font-family: 'Raleway', sans-serif;
   height: 100vh;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .bg {
+  background-image: linear-gradient(to bottom right, #4f2f37, rgba(32, 32, 32, 0));
+  /* #37272b */
   width: 100vmax;
   height: 100vmax;
   z-index: -1;
   position: fixed;
-  top: 0; bottom: 0; right: 0; left: 0;
-  margin: auto;
-  filter: blur(5px);
+  /* top: 0; bottom: 0; right: 0; left: 0;
+  margin: auto; */
+  filter: blur(0px);
 }
 
-header {display: flex;
+header {
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 50vh;
@@ -45,31 +50,88 @@ header {display: flex;
   list-style: none;
 }
 
-a {
+.menu a {
   padding: 10px 20px;
-  color: teal;
+  color: darkslategrey;
   text-decoration: none;
+  font-size: 1.7rem;
 }
 
-a:hover {
-  background-color: orange;
+.menu a:hover {
+  background-color: lightblue;
 }
 
-.site-subtitle,
 .site-title {
+  color: #eee0e5;
+  font-family: 'Caveat', cursive;
+  font-size: 10vw;
+  font-weight: normal;
+  padding: 10px;
   text-align: center;
-  color: whitesmoke;
+}
+
+.site-title:hover {
+  color: #e6598f;
 }
 
 .site-subtitle {
+  color: whitesmoke;
+  font-family: 'Comfortaa', cursive;
   font-style: italic;
   font-weight: lighter;
+  text-align: center;
+  font-size: 2rem;
 }
 
-h2, figcaption {
-  color: whitesmoke;
+.portfolio {
+  display: grid;
+}
+
+.portfolio h2 {
+  color: ghostwhite;
+  font-size: 2rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+}
+
+.portfolio figure {
+  background-color: corali;
+}
+
+figcaption {
+  color: ghostwhite;
+  font-size: 1.3em;
 }
 
 .img-portfolio {
   height: 150px;
+}
+
+@media (min-width: 600px) {
+  .site-title {
+    font-size: 60px;
+  }
+  .site-subtitle {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 680px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (min-width: 950px) {
+  .portfolio .grid {
+  grid-template-columns: repeat(3, 300px);
+}
 }
