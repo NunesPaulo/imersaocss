@@ -147,9 +147,13 @@ figcaption {
 }
 
 .img-portfolio {
+  width: 280px;
   height: 150px;
   transition: transform 500ms;
+  object-fit: cover;
+  object-position: bottom;
 }
+
 .img-portfolio:active,
 .img-portfolio:hover {
   transform: scale(1.2) rotate(-5deg);
