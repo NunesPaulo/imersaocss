@@ -5,28 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Comfortaa:wght@300&family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Comfortaa:wght@300&family=Raleway&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/69c93b1978.js" crossorigin="anonymous"></script>
   <title>Paulo Nunes</title>
 </head>
 
 <body>
-  <div>
-    <div class="bg"></div>
-    <header>
-      <nav class="menu">
-        <ul>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Portfólio</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
-      <div>
-        <h1 class="site-title">Paulo Henrique Nunes</h1>
-        <h2 class="site-subtitle">jr. frontend developer</h2>
-      </div>
-    </header>
-  </div>
-  <section class="portfolio">
+  <div class="bg"></div>
+  <header>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="profileback">
+      <img class="profile" src="img/profile.jpg" alt="Profile">
+    </div>
+    <div class="titulo">
+      <h1 class="site-title">Paulo Henrique Nunes</h1>
+      <h2 class="site-subtitle">jr. frontend developer</h2>
+    </div>
+  </header>
+
+  <section class="portfolio" id="portfolio">
     <h2>Portfólio</h2>
     <div class="grid">
       <figure>
@@ -48,6 +52,24 @@
     </div>
   </section>
 
+  <section class="contato" id="contato">
+    <h2>Contato</h2>
+    <div class="grid icons">
+      <a target="_blank" href="https://github.com/NunesPaulo">
+        <i class="fab fa-github-square"></i>
+      </a>
+      <a target="_blank" href="https://br.pinterest.com/xxxpauloxxx/boards/">
+        <i class="fab fa-pinterest-square"></i>
+      </a>
+      <a target="_blank" href="https://www.instagram.com/paulo.nunes.1983/">
+        <i class="fab fa-instagram-square"></i>
+      </a>
+      <a target="_blank" href="https://www.facebook.com/people/Paulo-Nunes/100012264038860">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+    </div>
+  </section>
+  <div class="space"></div>
 </body>
 
 </html>

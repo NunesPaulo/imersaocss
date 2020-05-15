@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
+  text-decoration: none;
 }
 
 body {
@@ -14,19 +16,17 @@ body {
 }
 
 .bg {
-  background-image: linear-gradient(to bottom right, #4f2f37, rgba(32, 32, 32, 0));
-  /* #37272b */
+  background-image: linear-gradient(to bottom right, #4f2f37, #20202000);
   width: 100vmax;
   height: 100vmax;
   z-index: -1;
   position: fixed;
-  /* top: 0; bottom: 0; right: 0; left: 0;
-  margin: auto; */
   filter: blur(0px);
 }
 
 header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 50vh;
@@ -34,6 +34,7 @@ header {
 
 .menu {
   position: fixed;
+  z-index: 1;
   background-color: whitesmoke;
   width: 100vw;
   top: 0px;
@@ -41,7 +42,7 @@ header {
 
 .menu ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding-inline-start: 0px;
 }
 
@@ -52,18 +53,50 @@ header {
 
 .menu a {
   padding: 10px 20px;
-  color: darkslategrey;
+  color: teal;
   text-decoration: none;
   font-size: 1.7rem;
+  font-weight: bolder;
+  transition: background-color 300ms, color 300ms;
 }
 
+.menu a:active,
 .menu a:hover {
-  background-color: lightblue;
+  background-color: teal;
+  color: whitesmoke;
+}
+
+.profileback {
+  height: 150px;
+  width: 150px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(to top left,  #5e2c38, #202020);
+  border-radius: 10px;
+}
+
+.profile {
+  height: 150px;
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+
+.titulo {
+  transform: scale(0.1);
+  opacity: 0;
+  animation: linear animatitulo 1s forwards;
+}
+
+@keyframes animatitulo {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .site-title {
   color: #eee0e5;
-  font-family: 'Caveat', cursive;
+  font-family: 'Great Vibes', cursive;
   font-size: 10vw;
   font-weight: normal;
   padding: 10px;
@@ -87,9 +120,11 @@ header {
   display: grid;
 }
 
+.contato h2,
 .portfolio h2 {
   color: ghostwhite;
   font-size: 2rem;
+  margin: 40px;
   padding: 10px;
   text-align: center;
 }
@@ -113,6 +148,29 @@ figcaption {
 
 .img-portfolio {
   height: 150px;
+  transition: transform 500ms;
+}
+.img-portfolio:active,
+.img-portfolio:hover {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.icons {
+  text-align: center;
+}
+
+.contato a {
+  font-size: 6rem;
+  color: ghostwhite;
+  transition: text-shadow 500ms;
+}
+
+.contato a:hover {
+  text-shadow: 0px 0px 10px #ffff00aa;
+}
+
+.contato i {
+  font-size: inherit;
 }
 
 @media (min-width: 600px) {
@@ -122,6 +180,10 @@ figcaption {
   .site-subtitle {
     font-size: 2.5em;
   }
+}
+
+.space {
+  height: 100px;
 }
 
 @media (min-width: 680px) {
